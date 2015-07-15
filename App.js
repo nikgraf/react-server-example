@@ -1,3 +1,5 @@
+var Belle = require('belle');
+
 var React = require('react'),
     DOM = React.DOM, div = DOM.div, button = DOM.button, ul = DOM.ul, li = DOM.li
 
@@ -39,7 +41,9 @@ module.exports = React.createClass({
 
       ul({children: this.state.items.map(function(item) {
         return li(null, item)
-      })})
+      })}),
+
+      Belle.Button()
 
     )
   },
