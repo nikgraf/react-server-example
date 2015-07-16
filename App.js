@@ -41,9 +41,7 @@ module.exports = React.createClass({
 
       ul({children: this.state.items.map(function(item) {
         return li(null, item)
-      })}),
-
-      Belle.Button()
+      })})
 
     )
   },
