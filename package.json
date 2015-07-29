@@ -16,6 +16,6 @@
     "browserify": "^10.1.3",
     "literalify": "^0.4.0",
     "react": "^0.13.3",
-    "belle": "1.0.0"
+    "belle": "1.1.1"
   }
 }

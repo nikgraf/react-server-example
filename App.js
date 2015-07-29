@@ -1,7 +1,13 @@
-var Belle = require('belle');
+var belle = require('belle');
+
 
 var React = require('react'),
     DOM = React.DOM, div = DOM.div, button = DOM.button, ul = DOM.ul, li = DOM.li
+
+var belleToggle = React.createFactory(belle.Toggle);
+var belleSelect = React.createFactory(belle.Select);
+var bellePlaceholder = React.createFactory(belle.Placeholder);
+var belleOption = React.createFactory(belle.Option);
 
 // This is just a simple example of a component that can be rendered on both
 // the server and browser
@@ -41,8 +47,21 @@ module.exports = React.createClass({
 
       ul({children: this.state.items.map(function(item) {
         return li(null, item)
-      })})
+      })}),
 
+      belleToggle(),
+
+      belleSelect({children: [bellePlaceholder({
+        children: "Select"
+      }),
+        belleOption({
+        value: 'testing1',
+        children: 'testing1'
+      }),
+        belleOption({
+          value: 'testing2',
+          children: 'testing2'
+        })]})
     )
   },
 })
